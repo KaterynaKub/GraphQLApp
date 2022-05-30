@@ -2,7 +2,6 @@
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
 using GraphQL.Types;
-using GraphQLServer.Example;
 using GraphQLServer.Repositories;
 using GraphQLServer.Schemas;
 using Microsoft.AspNetCore.Builder;
@@ -22,7 +21,6 @@ builder.Services.AddGraphQL(options =>
 
 // default setup
 builder.Services.AddControllers();
-
 
 var app = builder.Build();
 

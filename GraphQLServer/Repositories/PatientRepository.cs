@@ -101,6 +101,54 @@ namespace GraphQLServer.Repositories
                     Organization = "Sternenko Org"
                 },
                 ManagingOrganization = "Ololo"
+            },
+            new()
+            {
+                Id = Guid.NewGuid(),
+                Name = "Borya",
+                IsRecordActive = true,
+                Gender  = "female",
+                BirthDate = new(2007, 09, 23),
+                Telecom = "Boryas telecom",
+                IsDeceased = false,
+                DeceasedDateTime = null,
+                Adress = "BNR",
+                MaritalStatus  = "ne norm",
+                IsMultipleBirth  = false,
+                MultipleBirthCount  = 1,
+                Photo  = "(=^･ω･^=)",
+                Contact = new()
+                {
+                    Address = "Lviv2",
+                    Name = "Something2",
+                    Organization = "KPI2",
+                    Period = new()
+                    {
+                        StartDate = new(2014, 09, 3),
+                        EndDate = new(2020, 01, 21),
+                    },
+                    Relationship = "((((",
+                    Telecom = null
+                },
+                Communications = new List<Communication>
+                {
+                    new()
+                    {
+                        Language = "ua",
+                        Preferred = true,
+                    },
+                    new()
+                    {
+                        Language = "ru",
+                        Preferred = false,
+                    }
+                },
+                GeneralPractitioner = new()
+                {
+                    Name = "Sternenko",
+                    Organization = "Sternenko Org"
+                },
+                ManagingOrganization = "Ololo"
             }
         }.ToDictionary(x => x.Id);
 
