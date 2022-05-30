@@ -11,7 +11,7 @@ namespace GraphQLServer.Example
         {
             Query = serviceProvider.GetRequiredService<PatientQuery>();
             
-            Mutation = serviceProvider.GetRequiredService<CreatePatient>();
+            Mutation = serviceProvider.GetRequiredService<MutationsPatient>();
         }
     }
 }

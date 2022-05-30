@@ -4,6 +4,7 @@ using GraphQL.SystemTextJson;
 using GraphQL.Types;
 using GraphQLServer.Example;
 using GraphQLServer.Repositories;
+using GraphQLServer.Schemas;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // add notes schema
-builder.Services.AddSingleton<ISchema, PatientSchema>(services => new PatientSchema(new SelfActivatingServiceProvider(services)));
+builder.Services.AddSingleton<ISchema, PatientModelSchema>(services => new PatientModelSchema(new SelfActivatingServiceProvider(services)));
 builder.Services.AddSingleton<PatientRepository>();
 // register graphQL
 builder.Services.AddGraphQL(options =>
